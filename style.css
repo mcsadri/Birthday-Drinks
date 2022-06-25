@@ -1,0 +1,101 @@
+/* Cascading Style Sheet */
+
+body{
+    background-color: #9DFF33;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    background-color: #6323EB;
+    height: 100px;
+}
+
+h1{
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 50px;
+    color: #85EB17;
+    /* text-shadow: 5px 5px 5px blanchedalmond; */
+}
+
+nav li{
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav li a:hover{
+    color: black;
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+main{
+    width: 960px;
+    margin: 30px auto;
+    /* min-height: 700px; << this is optional */
+}
+
+main li{
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+main li img{
+    /* height: 150px; */
+    width: 300px;
+
+}
+
+main li:last-child{
+    margin-right: 0px;
+}
+
+#hero{
+    width: 960px;
+    height: 640px;  /*using only one H vs W will proporently auto-scale img */
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+#hero:hover{
+    border: 3px solid red;
+    border-radius: 0px;
+}
+
+section{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    background-color: #6323EB;
+    height: 100px;
+}
+
+footer p{
+    padding-top: 45px;
+}
