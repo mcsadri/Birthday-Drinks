@@ -11,15 +11,15 @@ let timeMillisecs;
 let timeDays;
 let message = '';
 
+//set background color according to userColor and modidy text color if neccesary
 document.body.style.backgroundColor = userColor;
 if(userColor === 'black'){
-    // document.body.style.text
     document.getElementById("myH2").style.color = "white";
 }
 
 //Determine how many days remain until the party day
 timeMillisecs = (today.getTime() - partyDay.getTime()) * -1;
-    // console.log('this many ms ' + timeMillisecs * -1);
+    // console.log('this many ms ' + timeMillisecs);
 timeDays = Math.floor(timeMillisecs / ( 1000 * 60 * 60 * 24));
     // console.log('this many days ' + timeDays);
 
