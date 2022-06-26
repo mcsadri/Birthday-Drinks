@@ -1,7 +1,7 @@
 'use strict'
 
 let firstName = prompt('What\'s your first name?')
-let faveFlavor = prompt('How do you like your whisk(e)y (malty, corny, peaty, bland)?');
+let faveFlavor = prompt('How do you like your whiskey (malty, corny, peaty, bland)?');
 let userColor = prompt('Pick a color (e.g. coral, pink, darkorange, gold, etc.):')
 var today = new Date();
     // console.log('today is ' + today);
