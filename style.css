@@ -18,6 +18,7 @@ li{
 
 header{
     background-color: #6323EB;
+    
     height: 100px;
 }
 
@@ -82,7 +83,7 @@ main li:last-child{
 }
 
 #hero:hover{
-    border: 3px solid red;
+    border: 3px solid #6323EB;
     border-radius: 0px;
 }
 
