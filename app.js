@@ -7,7 +7,6 @@ var today = new Date();
     // console.log('today is ' + today);
 var partyDay = new Date('07/06/2024');
     // console.log('We party on ' + partyDay);
-let timeMillisecs;
 let timeDays;
 let message = '';
 
@@ -18,10 +17,7 @@ if(userColor === 'black'){
 }
 
 //Determine how many days remain until the party day
-timeMillisecs = (today.getTime() - partyDay.getTime()) * -1;
-    // console.log('this many ms ' + timeMillisecs);
-timeDays = Math.floor(timeMillisecs / ( 1000 * 60 * 60 * 24));
-    // console.log('this many days ' + timeDays);
+timeDays = Math.floor(((today.getTime() - partyDay.getTime()) * -1) / ( 1000 * 60 * 60 * 24));
 
 //Provide on-screen greeting depending on user's favoriteFlavor of whisk(e)y
 if(faveFlavor === 'corny'){
