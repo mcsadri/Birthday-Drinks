@@ -1,29 +1,12 @@
 'use strict'
 
 function getGreeting(){
-    let greetingMsgPt1 = getUserInput();
-    let greetingDays = getDays();
-    return document.write(greetingMsgPt1 + ' There are ' + greetingDays + ' days until we open these.');
-}
-
-// get input from user and validate
-function getUserInput(){
-    let count =+ 1;
     let greetingName = getFirstName();
-        console.log(count, greetingName);
     let greetingFlavor = getFlavor();
-        console.log(count, greetingFlavor);
-    let greetingColor = getColor();
-    console.log(count, greetingColor);
-    let userConfirm = confirm("You entered:\n" + "\tFirst name: " + greetingName + "\n" + "\tFlavor: " + greetingFlavor + "\n" + "\tColor: " + greetingColor + "\n" + "Are these are correct.");
-    if (userConfirm === true){
-        //exit
-    } else{
-        getUserInput();
-    }
     let greetingFlavorMsg = getFlavorMsg(greetingFlavor);
-    let message1 = 'Hello ' + greetingName + '. ' + greetingFlavorMsg;
-    return message1;
+    getColor();
+    let greetingDays = getDays();
+    return document.write('Hi, ' + greetingName + '. ' + greetingFlavorMsg + ' There are ' + greetingDays + ' days until we open these.');
 }
 
 // prompts and returns user's first name
@@ -34,7 +17,14 @@ function getFirstName(){
 
 // prompts and returns user's whiskey flavor
 function getFlavor(){
-    let faveFlavor = prompt('How do you like your whiskey (malty, corny, peaty, bland)?');
+    //let faveFlavor = '';
+    let faveFlavor;
+    //console.log(faveFlavor);
+    while(faveFlavor != 'malty' && faveFlavor != 'corny' && faveFlavor != 'peaty' && faveFlavor != 'bland'){
+        faveFlavor = prompt('How do you like your whiskey (malty, corny, peaty, bland)?');
+        //console.log(faveFlavor);
+    }
+    //console.log(faveFlavor);
     return faveFlavor;
 }
 
@@ -67,6 +57,18 @@ function getColor(){
         document.getElementById("myH2").style.color = "white";
     }
     return userColor;
+}
+
+// prompts and sets how many extra bottles are needed
+function getExtraBottles(){
+    let userBottles = prompt('How many extra bottles of booze will we need? (1 -5)');
+    let countBottles;
+    let printBottles = '';
+    for(let x = 0; x < userBottles; x++){
+        countBottles = x + 1;
+        printBottles = printBottles + '<img class="clipartBottle" alt="whiskey bottle clipart" src="./images/whiskeyclipart.jpg">' + countBottles;
+    }
+        return document.write(printBottles);
 }
 
 // calculate the number days from today until partyDay
